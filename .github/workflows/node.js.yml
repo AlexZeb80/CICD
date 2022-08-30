@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,8 +29,8 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-#     - name: Run test
-#       run: npm test
+    - name: Run test
+      run: npm test
       
     - run: npm ci
     - run: npm run build --if-present
